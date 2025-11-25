@@ -1,6 +1,6 @@
 # Personal Portfolio Website Plan
 
-This document outlines the plan for creating and deploying a personal portfolio website for `astaran.cloud`.
+This document outlines the plan for creating and deploying a personal portfolio website for `tarang.cloud`.
 
 ## 1. Project Overview
 
@@ -14,7 +14,7 @@ The goal is to build a modern, professional, and fast personal portfolio website
 *   **Contact:** A simple way for people to get in touch with you.
 *   **Resume:** A link to download your resume.
 
-The website will be secure (HTTPS) and hosted on your domain `astaran.cloud`. The entire solution is designed to be highly cost-effective by leveraging serverless technologies and static site generation.
+The website will be secure (HTTPS) and hosted on your domain `tarang.cloud`. The entire solution is designed to be highly cost-effective by leveraging serverless technologies and static site generation.
 
 ## 2. Proposed Technology Stack
 
@@ -55,14 +55,14 @@ For hosting, I propose a serverless architecture on AWS that is secure, scalable
     *   CloudFront will sit in front of our S3 bucket. It will cache the website content at edge locations around the world, ensuring fast delivery to your visitors.
 
 *   **DNS: [Amazon Route 53](https://aws.amazon.com/route53/)**
-    *   We will use Route 53 to manage your domain `astaran.cloud` and point it to the CloudFront distribution.
+    *   We will use Route 53 to manage your domain `tarang.cloud` and point it to the CloudFront distribution.
 
 *   **Security (HTTPS): [AWS Certificate Manager (ACM)](https://aws.amazon.com/certificate-manager/)**
     *   ACM provides **free** SSL/TLS certificates that can be easily integrated with CloudFront to serve your website over a secure HTTPS connection.
 
 ### How It Works:
 
-1.  A visitor goes to `https://astaran.cloud`.
+1.  A visitor goes to `https://tarang.cloud`.
 2.  Route 53 directs the request to the CloudFront distribution.
 3.  CloudFront serves the cached static website content from the nearest edge location. If not cached, it fetches it from the S3 bucket.
 4.  The visitor's browser receives the website content quickly and securely.
@@ -95,7 +95,7 @@ Here is the sequence of steps we will follow to bring your portfolio to life:
     *   Set up an S3 bucket for static website hosting.
     *   Create a CloudFront distribution pointing to the S3 bucket.
     *   Provision a free SSL certificate in ACM and attach it to CloudFront.
-    *   Configure Route 53 to point `astaran.cloud` to the CloudFront distribution.
+    *   Configure Route 53 to point `tarang.cloud` to the CloudFront distribution.
 
 3.  **Phase 3: Deployment and CI/CD**
     *   Create the GitHub Actions workflow for automated deployments.
