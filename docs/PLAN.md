@@ -85,19 +85,34 @@ To automate the deployment process, we will set up a CI/CD (Continuous Integrati
 
 Here is the sequence of steps we will follow to bring your portfolio to life:
 
-1.  **Phase 1: Project Setup & Initial Build (Local)**
-    *   Initialize a new Next.js project with Tailwind CSS.
-    *   Create the basic structure and components for each section (Home, About, etc.).
-    *   Develop the UI based on the provided inspiration.
-    *   Set up the blog system using local Markdown files.
+### Phase 1: Project Setup & Personalization (Completed)
+- [x] **Project Initialization:** Renamed `roland-portfolio-clone` to `portfolio` and installed dependencies.
+- [x] **Personalization:** Updated name to "Udit Mishra", changed title, and updated footer.
+- [x] **Assets:** Imported sample images to `public/images`.
+- [x] **Resume:** Added a "Resume" download button and link in navigation.
+- [x] **Styling:** Adjusted font weights for a cleaner look.
 
-2.  **Phase 2: AWS Infrastructure Setup**
-    *   Set up an S3 bucket for static website hosting.
-    *   Create a CloudFront distribution pointing to the S3 bucket.
-    *   Provision a free SSL certificate in ACM and attach it to CloudFront.
-    *   Configure Route 53 to point `tarang.cloud` to the CloudFront distribution.
+### Phase 2: AWS Infrastructure Setup (Next Steps)
+- [ ] **S3 Bucket:** Create an S3 bucket for static website hosting.
+- [ ] **CloudFront:** Create a CloudFront distribution pointing to the S3 bucket.
+- [ ] **SSL Certificate:** Provision a free SSL certificate in ACM and attach it to CloudFront.
+- [ ] **DNS:** Configure Route 53 to point `tarang.cloud` to the CloudFront distribution.
 
-3.  **Phase 3: Deployment and CI/CD**
+### Phase 3: Backend & Features (Upcoming)
+- [ ] **Contact Form:** Create an AWS Lambda function and API Gateway for handling emails.
+- [ ] **Blog Section:** (Deferred) Implement a blog system using Markdown or a CMS.
+
+### Phase 4: Deployment and CI/CD
+- [ ] **GitHub Actions:** Set up a workflow to build and deploy the site to S3 automatically on push.
+
+## 6. Progress Log
+
+*   **2025-11-25:**
+    *   Renamed project directory to `portfolio`.
+    *   Updated personal details (Name: Udit Mishra, Email: contact@tarang.cloud).
+    *   Added Resume download functionality.
+    *   Imported sample images.
+    *   Verified build successfully.
     *   Create the GitHub Actions workflow for automated deployments.
     *   Perform the first deployment to AWS.
     *   Test the live website.

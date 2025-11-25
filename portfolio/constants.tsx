@@ -12,11 +12,11 @@ export const SOCIALS: SocialLink[] = [
     url: 'https://linkedin.com',
     icon: Linkedin
   },
-  // {
-  //   name: 'Email',
-  //   url: 'mailto:contact@rolind.me',
-  //   icon: Mail
-  // }
+  {
+    name: 'Email',
+    url: 'mailto:uditmishra.um@gmail.com',
+    icon: Mail
+  }
 ];
 
 export const EXPERIENCE: Experience[] = [

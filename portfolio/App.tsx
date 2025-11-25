@@ -5,7 +5,7 @@ import { SkillsGrid } from './components/SkillsGrid';
 import { RoleRotator } from './components/RoleRotator';
 import { RandomQuote } from './components/RandomQuote';
 import { EXPERIENCE, SKILLS, WHAT_I_DO, SOCIALS } from './constants';
-import { ArrowRight, Sun, Moon } from './components/Icons';
+import { ArrowRight, Sun, Moon, Download } from './components/Icons';
 
 function App() {
   const [activeSection, setActiveSection] = useState<string>('home');
@@ -62,30 +62,30 @@ function App() {
 
   return (
     <div className={`min-h-screen font-sans ${isDarkMode ? 'dark' : ''} text-slate-900 dark:text-slate-100 transition-colors duration-300`}>
-      
+
       {/* Navbar */}
       <Nav activeSection={activeSection} onNavClick={scrollToSection} />
 
       <main className="mx-auto max-w-5xl px-6 pb-24 pt-32 sm:px-12">
-        
+
         {/* HERO SECTION */}
         <section id="home" className="flex min-h-[80vh] flex-col items-center justify-center text-center">
           <div className="relative mb-8 group">
             <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-75 blur transition duration-500 hover:opacity-100"></div>
             <div className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white dark:border-[#050a18] bg-white dark:bg-[#050a18]">
-               {/* Using a placeholder avatar since I cannot access the real image */}
-               <img 
-                src="https://avatar.vercel.sh/rolind?size=160" 
-                alt="Rolind Roy" 
+              {/* Using a placeholder avatar since I cannot access the real image */}
+              <img
+                src="https://ui-avatars.com/api/?name=Udit+Mishra&background=0D8ABC&color=fff&size=160"
+                alt="Udit Mishra"
                 className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
               />
             </div>
           </div>
 
-          <h1 className="mb-4 text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 sm:text-6xl md:text-7xl">
-            Hello, I'm <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">Rolind Roy</span>
+          <h1 className="mb-4 text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-6xl md:text-7xl">
+            Hello, I'm <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">Udit Mishra</span>
           </h1>
-          
+
           <div className="mb-6 flex w-full items-center justify-center">
             <RoleRotator />
           </div>
@@ -106,6 +106,16 @@ function App() {
             <button onClick={() => scrollToSection('contact')} className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-3.5 text-sm font-bold text-white shadow-lg transition-all hover:scale-105 hover:shadow-blue-500/25">
               Get in touch <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </button>
+
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 px-8 py-3.5 text-sm font-bold text-slate-700 dark:text-slate-200 shadow-lg transition-all hover:scale-105 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+            >
+              Resume <Download size={16} className="transition-transform group-hover:translate-y-1" />
+            </a>
+
             <div className="flex gap-4">
               {SOCIALS.map((social) => (
                 <a
@@ -120,7 +130,7 @@ function App() {
               ))}
             </div>
           </div>
-          
+
           {/* Vertical divider line effect at bottom of hero */}
           <div className="mt-24 h-24 w-px bg-gradient-to-b from-blue-500/50 to-transparent"></div>
         </section>
@@ -129,7 +139,7 @@ function App() {
         {/* ABOUT ME SECTION */}
         <section id="about" className="py-20 text-center">
           <h2 className="mb-12 text-4xl font-bold text-slate-900 dark:text-slate-100">About Me</h2>
-          
+
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
             <p>
               I'm a DevOps Evangelist and Cloud Architect with more than a decade of experience designing scalable, secure, and automated infrastructure. My work sits at the intersection of cloud architecture, platform engineering, and team enablement — helping organizations streamline operations, accelerate delivery, and operate with confidence.
@@ -166,8 +176,8 @@ function App() {
         {/* WHAT I DO SECTION */}
         <section id="what-i-do" className="py-20">
           <div className="mb-16 text-center">
-             <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100">What I Do</h2>
-             <p className="mt-4 text-slate-600 dark:text-slate-400">This is what I do best - turning complex challenges into elegant solutions</p>
+            <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-100">What I Do</h2>
+            <p className="mt-4 text-slate-600 dark:text-slate-400">This is what I do best - turning complex challenges into elegant solutions</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -192,13 +202,13 @@ function App() {
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a 
-              href="mailto:contact@rolind.me"
+            <a
+              href="mailto:contact@tarang.cloud"
               className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-8 py-4 font-bold text-white transition-transform hover:-translate-y-1 hover:bg-blue-500 sm:w-auto"
             >
               <ArrowRight className="h-5 w-5" /> Email Me Directly
             </a>
-            <a 
+            <a
               href="#"
               className="flex w-full items-center justify-center gap-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-transparent px-8 py-4 font-bold text-slate-600 dark:text-slate-300 transition-all hover:-translate-y-1 hover:border-blue-500 hover:text-blue-500 sm:w-auto"
             >
@@ -206,19 +216,19 @@ function App() {
             </a>
           </div>
         </section>
-        
+
         {/* Footer */}
         <footer className="mt-20 border-t border-slate-200 dark:border-slate-800 pt-8 text-center">
           <div className="mb-4 flex justify-center gap-6">
             {SOCIALS.map((social) => (
-               <a key={social.name} href={social.url} className="text-slate-500 hover:text-blue-600 dark:text-slate-500 dark:hover:text-blue-500 transition-colors">
-                 <social.icon size={18} />
-               </a>
+              <a key={social.name} href={social.url} className="text-slate-500 hover:text-blue-600 dark:text-slate-500 dark:hover:text-blue-500 transition-colors">
+                <social.icon size={18} />
+              </a>
             ))}
           </div>
           <p className="text-sm text-slate-500 dark:text-slate-600">
-            © {new Date().getFullYear()} Rolind Roy. All rights reserved. <br/>
-            <span className="text-xs opacity-70">Based in Dubai AE • Roots in India IN</span>
+            © {new Date().getFullYear()} Udit Mishra. All rights reserved. <br />
+            <span className="text-xs opacity-70">Based in India</span>
           </p>
         </footer>
 
